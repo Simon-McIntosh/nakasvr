@@ -23,7 +23,7 @@ spyder = "<=6"
 [build-system]
 requires = [
   "poetry-core>=1.9",
-  "poetry-dynamic-versioning>1.4.1"
+  "poetry-dynamic-versioning>=1.4.1"
 ]
 build-backend = "poetry-dynamic-versioning"
 
