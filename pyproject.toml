@@ -30,8 +30,8 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry]
 version = "0.0.0"
 name = "nakasvr"
-#description = "-"
-#authors = ["-"]
+description = "Connect a remote kernel with a local Spyder IDE"
+authors = ["Simon McIntosh <simon.mcintosh@iter.org>"]
 
 [project.scripts]
 remote_kernel = "nakasvr.kernel:remote_kernel"
