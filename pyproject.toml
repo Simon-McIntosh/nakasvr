@@ -21,10 +21,7 @@ pre-commit = "^4.0.1"
 spyder = "<=6"
 
 [build-system]
-requires = [
-  "poetry-core>=1.9",
-  "poetry-dynamic-versioning>=1.4.1"
-]
+requires = ["poetry-core>=1.9"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
