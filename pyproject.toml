@@ -18,16 +18,16 @@ dependencies = [
   "spyder-kernels",
 ]
 
-[project.optional-dependencies]
 
 [build-system]
 requires = [
-  "poetry-core>=1.9",
+  "poetry-core @ git+https://github.com/radoering/poetry-core.git@pep621-support",
+  "poetry-dynamic-versioning @ git+https://github.com/mtkennerly/poetry-dynamic-versioning.git@poetry-pep621",
 ]
-build-backend = "poetry.core.masonry.api"  # "poetry_dynamic_versioning.backend"
+build-backend = "poetry_dynamic_versioning.backend"
 
 [tool.poetry]
-version = "0.0.1"
+version = "0.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.0.1"
