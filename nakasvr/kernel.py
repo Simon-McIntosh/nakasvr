@@ -36,7 +36,7 @@ class Connect:
         try:
             result = ssh.run(f"tmux has-session -t {self.session}", hide=True)
             assert result.return_code == 0
-            return True
+            # return True
         except (invoke.UnexpectedExit, AssertionError):
             ssh.run(f"tmux new -d -s {self.session} /usr/bin/bash", hide=True)
 
@@ -83,7 +83,7 @@ class SpyderKernel(Connect):
     def launch(self):
         """Launch spyder kernel in tmux session running in a venv on the remote host."""
         module_use = "ml use /home/d230021/public/imas/etc/modules/all"
-        module_load = "ml Python IMASPy"
+        module_load = "ml IMASPy"
         venv_activate = f". {self.venv_dir}/activate"
         spyder_kernel = "python -m spyder_kernels.console"
 
