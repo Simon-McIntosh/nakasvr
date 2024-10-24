@@ -24,7 +24,7 @@ spyder = "<=6"
 [build-system]
 requires = [
   "poetry-core>=1.9",
-  "poetry-dynamic-versioning @ git+https://github.com/mtkennerly/poetry-dynamic-versioning.git"
+  "poetry-dynamic-versioning@git+https://github.com/mtkennerly/poetry-dynamic-versioning.git@poetry-pep621"
 ]
 build-backend = "poetry-dynamic-versioning"
 
