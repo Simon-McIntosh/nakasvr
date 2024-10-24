@@ -83,7 +83,7 @@ class SpyderKernel(Connect):
     def launch(self):
         """Launch spyder kernel in tmux session running in a venv on the remote host."""
         module_use = "ml use /home/d230021/public/imas/etc/modules/all"
-        module_load = "ml Python"
+        module_load = "ml Python IMASPy"
         venv_activate = f". {self.venv_dir}/activate"
         spyder_kernel = "python -m spyder_kernels.console"
 
