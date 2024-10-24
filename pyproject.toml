@@ -30,7 +30,7 @@ build-backend = "poetry-dynamic-versioning"
 
 [tool.poetry]
 version = "0.0.0"
-#name = "*"
+name = "-"
 #description = "*"
 #authors = ["Simon McIntosh <simon.mcintosh@iter.org>"]
 
