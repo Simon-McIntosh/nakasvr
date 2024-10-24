@@ -23,16 +23,16 @@ spyder = "<=6"
 
 [build-system]
 requires = [
-  "poetry-core @ git+https://github.com/python-poetry/poetry-core.git",
-  "poetry-dynamic-versioning @ https://github.com/mtkennerly/poetry-dynamic-versioning.git@poetry-pep621"
+  "poetry-core>=1.9",
+  "poetry-dynamic-versioning @ git+https://github.com/mtkennerly/poetry-dynamic-versioning.git"
 ]
 build-backend = "poetry-dynamic-versioning"
 
 [tool.poetry]
 version = "0.0.0"
-name = "-"
-#description = "*"
-#authors = ["Simon McIntosh <simon.mcintosh@iter.org>"]
+name = "nakasvr"
+#description = "-"
+#authors = ["-"]
 
 [project.scripts]
 remote_kernel = "nakasvr.kernel:remote_kernel"
