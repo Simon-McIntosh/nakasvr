@@ -20,10 +20,7 @@ dependencies = [
 
 
 [build-system]
-requires = [
-  "poetry-core @ git+https://github.com/radoering/poetry-core.git@pep621-support",
-  "poetry-dynamic-versioning @ git+https://github.com/mtkennerly/poetry-dynamic-versioning.git@poetry-pep621",
-]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
 build-backend = "poetry_dynamic_versioning.backend"
 
 [tool.poetry]
@@ -35,3 +32,10 @@ pre-commit = "^4.0.1"
 [project.scripts]
 lanuch_kernel = "nakasvr.lanuch:lanuch"
 copy_kernel = "nakasvr.copy:copy"
+
+[tool.poetry-dynamic-versioning]
+enable = true
+vcs = "git"
+style = "semver"
+pattern = "^(?P<base>\\d+\\.\\d+\\.\\d+)(-?((?P<stage>[a-zA-Z]+)\\.?(?P<revision>\\d+)?))?"
+format = "{base}+{distance}.{commit}"
