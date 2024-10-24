@@ -25,6 +25,9 @@ build-backend = "poetry_dynamic_versioning.backend"
 
 [tool.poetry]
 version = "0.0.0"
+name = "nakasvr"
+description = "Connect a remote kernel with a local Spyder IDE"
+authors = ["Simon McIntosh <simon.mcintosh@iter.org>"]
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.0.1"
