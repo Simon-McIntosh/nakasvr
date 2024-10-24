@@ -30,8 +30,7 @@ version = "0.0.0"
 pre-commit = "^4.0.1"
 
 [project.scripts]
-lanuch_kernel = "nakasvr.lanuch:lanuch"
-copy_kernel = "nakasvr.copy:copy"
+remote_kernel = "nakasvr.kernel:remote_kernel"
 
 [tool.poetry-dynamic-versioning]
 enable = true

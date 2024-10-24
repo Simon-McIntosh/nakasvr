@@ -132,13 +132,11 @@ class SpyderKernel(Connect):
 
 
 @click.command()
+@click.argument("username")
 @click.option(
-    "--username",
-    default=None,
-    help="Set username for connection to remote host.",
-)
-@click.option(
-    "--hostname", default="nakasvr23.naka.qst.go.jp", help="Address for remote host."
+    "--hostname",
+    default="nakasvr23.naka.qst.go.jp",
+    help="default: nakasvr23.naka.qst.go.jp.",
 )
 def remote_kernel(username, hostname):
     """Launch remote spyder-kernel and copy to local host."""
