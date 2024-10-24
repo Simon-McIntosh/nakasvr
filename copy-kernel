@@ -1,9 +1,0 @@
-#!/bin/bash
-
-user=d240044
-nakasvr=nakasvr23.naka.qst.go.jp
-runtime=/home/$user/.local/share/jupyter/runtime
-
-#copy spyder-kernel json file local machine
-kernel=$(ssh $user@$nakasvr "ls -1tr $runtime | tail -1")
-scp $user@$nakasvr:$runtime/$kernel kernel.json

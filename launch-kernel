@@ -1,5 +1,0 @@
-#!/bin/bash
-
-# lanuch spyder console
-ssh d240044@nakasvr23.naka.qst.go.jp "ml Python && cd ~/Code/JT60SA && poetry run python -m spyder_kernels.console"
-# ssh d240044@nakasvr23.naka.qst.go.jp "ml Python && . ~/.venv/spyder-env/bin/activate && python -m spyder_kernels.console"
