@@ -1,6 +1,6 @@
 [project]
 name = "nakasvr"
-dynamic = ["version"]
+version = "0.0.3"
 description = "Connect a remote kernel with a local Spyder IDE"
 authors = [
     {name = "Simon McIntosh",email = "simon.mcintosh@iter.org"}
@@ -22,20 +22,21 @@ pre-commit = "^4.0.1"
 spyder = "<=6"
 
 [build-system]
-requires = ["poetry-core>=1.9", "poetry-dynamic-versioning>=1.4"]
-build-backend = "poetry_dynamic_versioning.backend"
+requires = ["poetry-core @ git+https://github.com/python-poetry/poetry-core.git"]
+#, "poetry-dynamic-versioning>=1.4"]
+build-backend = "poetry.core.masonry.api"
 
-[tool.poetry]
-version = "0.0.0"
-name = "*"
-description = "*"
-authors = ["Simon McIntosh <simon.mcintosh@iter.org>"]
+#[tool.poetry]
+#version = "0.0.0"
+#name = "*"
+#description = "*"
+#authors = ["Simon McIntosh <simon.mcintosh@iter.org>"]
 
 [project.scripts]
 remote_kernel = "nakasvr.kernel:remote_kernel"
 
 [tool.poetry-dynamic-versioning]
-enable = true
+enable = false
 vcs = "git"
 style = "semver"
 pattern = "^(?P<base>\\d+\\.\\d+\\.\\d+)(-?((?P<stage>[a-zA-Z]+)\\.?(?P<revision>\\d+)?))?"
