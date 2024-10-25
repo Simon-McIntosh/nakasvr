@@ -31,7 +31,8 @@ description = "Connect a remote kernel with a local Spyder IDE"
 authors = ["Simon McIntosh <simon.mcintosh@iter.org>"]
 
 [project.scripts]
-remote_kernel = "nakasvr.kernel:remote_kernel"
+launch_kernel = "nakasvr.kernel:launch_kernel"
+copy_kernel = "nakasvr.kernel:copy_kernel"
 
 [tool.poetry-dynamic-versioning]
 enable = true

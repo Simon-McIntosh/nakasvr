@@ -138,10 +138,22 @@ class SpyderKernel(Connect):
     default="nakasvr23.naka.qst.go.jp",
     help="default: nakasvr23.naka.qst.go.jp.",
 )
-def remote_kernel(username, hostname):
+def launch_kernel(username, hostname):
     """Launch remote spyder-kernel and copy to local host."""
     kernel = SpyderKernel(username, hostname)
     kernel.launch()
+
+
+@click.command()
+@click.argument("username")
+@click.option(
+    "--hostname",
+    default="nakasvr23.naka.qst.go.jp",
+    help="default: nakasvr23.naka.qst.go.jp.",
+)
+def copy_kernel(username, hostname):
+    """Launch remote spyder-kernel and copy to local host."""
+    kernel = SpyderKernel(username, hostname)
     kernel.copy()
 
 
