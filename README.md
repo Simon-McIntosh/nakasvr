@@ -42,14 +42,14 @@ pip install .[client]
 ```
 
 ## Use
-Connection of a local Spyder IDE to a remote client requires an instance of the Spyder kernel to be launched on server. The connection ID of this kernel must then be copied from the server to the client. 
-The spyder kernel is launched using the following command run from the client. This command instigates the spyder kernel within a `tmux` window on the server.  The use of a `tmux` window allows the  remote spyder kernel to persist independent of the connection status of the user.
-###
+Connection of a local Spyder IDE to a remote client requires an instance of the Spyder kernel to be launched on server. The connection ID of this kernel must then be copied from the server to the client. Both of these steps are handled by the `Nakasvr` module using the `lanuch_kernel` and `copy_kernel` commands. 
+The spyder kernel is launched using the following command run from the client. 
 ```sh
 launch_kernel
 ```
+This command instigates the spyder kernel within a `tmux` window on the server.  The use of a `tmux` window allows the remote spyder kernel to persist independent of the connection status of the user.
+###
 
-The remote spyder kernel is launched This enables the
 The launch / copy step described below is only required following reboots of the `nakasvr23` analysis server.
 
 
@@ -67,6 +67,6 @@ poetry install
 pre-commit install
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2MDA3NzE2NCwtMTgxNDc5MjEyNywxMT
+eyJoaXN0b3J5IjpbMTgzNzA3NTU3MCwtMTgxNDc5MjEyNywxMT
 M4NDcyNjgxLDExMzc3MTA4MTAsNjY4OTYzODA4XX0=
 -->
