@@ -31,28 +31,27 @@ class Connect:
     hostname: str = "nakasvr23.naka.qst.go.jp"
     session: str = "nakasvr"
 
-    def has_session(self, ssh):
+    def has_session(self):
         """Return True if has-session else create new session."""
         try:
-            result = ssh.run(f"tmux has-session -t {self.session}", hide=True)
+            result = self.ssh.run(f"tmux has-session -t {self.session}", hide=True)
             assert result.return_code == 0
-            # return True
         except (invoke.UnexpectedExit, AssertionError):
-            ssh.run(f"tmux new -d -s {self.session} /usr/bin/bash", hide=True)
+            self.ssh.run(f"tmux new -d -s {self.session} /usr/bin/bash", hide=True)
 
     @cached_property
     def filesystem(self):
         """Return fsspec instance."""
         return fsspec.filesystem("ssh", host=self.hostname, username=self.username)
 
-    def connect(self):
+    @cached_property
+    def ssh(self):
         """Mannage connection to host."""
         return fabric.Connection(f"{self.username}@{self.hostname}")
 
     def kill(self):
         """Kill remote tmux session."""
-        with self.connect() as ssh:
-            ssh.run(f"tmux kill-session -t {self.session}")
+        self.ssh.run(f"tmux kill-session -t {self.session}")
 
 
 @dataclass
@@ -62,42 +61,48 @@ class SpyderKernel(Connect):
     kerneldir: str = field(default_factory=appdirs.user_cache_dir)
 
     @cached_property
-    def venv_dir(self):
+    def homedir(self):
+        """Return home directory on remote."""
+        return Path(self.ssh.run("echo $HOME", hide=True).stdout.strip())
+
+    @cached_property
+    def venvdir(self):
         """Return venv directory."""
         try:
-            venv_dir = f"/home/{self.username}/.venv/{self.session}/bin"
-            assert self.filesystem.isdir(venv_dir)
+            venvdir = self.homedir / f".venv/{self.session}/bin"
+            assert self.filesystem.isdir(venvdir.as_posix())
         except AssertionError as error:
             raise AssertionError(
                 "SpyderKernel requires the following venv to be present on the "
-                f"remote host {venv_dir}."
+                f"remote host {venvdir}."
             ) from error
-        return venv_dir
+        return venvdir
 
-    def _ssh_run(self, ssh, command):
+    def _ssh_run(self, command):
         """Run tmux command."""
         command = command.replace(" ", r"\ ")
-        return ssh.run(rf"tmux send -t {self.session}.0 {command} ENTER", hide=True)
+        return self.ssh.run(
+            rf"tmux send -t {self.session}.0 {command} ENTER", hide=True
+        )
 
     def launch(self):
         """Launch spyder kernel in tmux session running in a venv on the remote host."""
         module_use = "ml use /home/d230021/public/imas/etc/modules/all"
         module_load = "ml IMASPy"
-        venv_activate = f". {self.venv_dir}/activate"
+        venv_activate = f". {self.venvdir}/activate"
         spyder_kernel = "python -m spyder_kernels.console"
 
-        with self.connect() as ssh:
-            if self.has_session(ssh):
-                return
-            for command in [module_use, module_load, venv_activate, spyder_kernel]:
-                self._ssh_run(ssh, command)
+        if self.has_session():
+            return
+        for command in [module_use, module_load, venv_activate, spyder_kernel]:
+            self._ssh_run(command)
 
     @cached_property
     def runtime(self):
         """Return runtime directory."""
-        runtime = f"/home/{self.username}/.local/share/jupyter/runtime"
+        runtime = self.homedir / ".local/share/jupyter/runtime"
         try:
-            assert self.filesystem.isdir(runtime)
+            assert self.filesystem.isdir(runtime.as_posix())
         except AssertionError as error:
             raise FileNotFoundError(
                 f"runtime directory {runtime} not found."
@@ -106,7 +111,7 @@ class SpyderKernel(Connect):
 
     def locate(self):
         """Return file detal of last created kernel."""
-        files = self.filesystem.ls(self.runtime, detail=True)
+        files = self.filesystem.ls(self.runtime.as_posix(), detail=True)
         filedetail = files[np.argmax([file["mtime"].timestamp() for file in files])]
         logging.info(f'Found {Path(filedetail["name"]).name}.')
         logging.info(f'Kernel last modified at {filedetail["time"]}.')
@@ -158,6 +163,6 @@ def copy_kernel(username, hostname):
 
 if __name__ == "__main__":
 
-    kernel = SpyderKernel("d240044", "nakasvr23.naka.qst.go.jp")
+    kernel = SpyderKernel("mcintos", "sdcc-login04.iter.org")
     kernel.launch()
     kernel.copy()
