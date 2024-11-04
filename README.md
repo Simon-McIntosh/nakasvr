@@ -12,8 +12,10 @@ Installation is required on both the client (local) and server (remote). The use
 virtual environments is encouraged when installing Nakasvr on both the client
 and the server. Installation of `Nakasvr` requires a recent Python>=3.10. 
 Installation of dependencies using the `Nakasvr` module ensures that the 
+compatible versions of the Spyder IDE and Spyder kernel are used.
 
 ### Client install
+If worki
 Create virtual environments for the client and server. Subsequent use of python commands assumes
 that the virtual environment is active.
 
@@ -59,6 +61,6 @@ poetry install
 pre-commit install
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTQ3OTIxMjcsMTEzODQ3MjY4MSwxMT
-M3NzEwODEwLDY2ODk2MzgwOF19
+eyJoaXN0b3J5IjpbOTkzMTI4NzYsLTE4MTQ3OTIxMjcsMTEzOD
+Q3MjY4MSwxMTM3NzEwODEwLDY2ODk2MzgwOF19
 -->
