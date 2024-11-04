@@ -59,5 +59,5 @@ poetry install
 pre-commit install
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY4OTYzODA4XX0=
+eyJoaXN0b3J5IjpbMTEzNzcxMDgxMCw2Njg5NjM4MDhdfQ==
 -->
