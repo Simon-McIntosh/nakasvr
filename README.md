@@ -31,21 +31,18 @@ Install spyder kernel
 pip install .[server]
 ```
 ### Client install
-Create and activate the client-side virtual environment. This environment may take any name / location. We select the same name as used for the se
+Create and activate the client-side virtual environment. This environment may take any name / location. Here, we select the same name as used for the server side install.
 ```sh
 python -m venv ~/.venv/nakasvr
 . ~/.venv/nakasvr/bin/activate
 ```
+Install the client environment. 
 ```sh
 pip install .[client]
 ```
 
-Server
-
-
 ## Use
-Connection of a local Spyder IDE to a remote client requires the launch of a Spyder kernel on the server side.
-This is managed using the following script
+Connection of a local Spyder IDE to a remote client requires the launch of a Spyder kernel on the server side. This is managed using the following script
 
 ###
 ```sh
@@ -64,6 +61,6 @@ poetry install
 pre-commit install
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNTQ5NTUxMiwtMTgxNDc5MjEyNywxMT
-M4NDcyNjgxLDExMzc3MTA4MTAsNjY4OTYzODA4XX0=
+eyJoaXN0b3J5IjpbNTg2MDkxNTkwLC0xODE0NzkyMTI3LDExMz
+g0NzI2ODEsMTEzNzcxMDgxMCw2Njg5NjM4MDhdfQ==
 -->
