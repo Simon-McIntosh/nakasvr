@@ -21,7 +21,7 @@ ssh <username>@nakasvr23.naka.qst.go.jp
 module use /home/d230021/public/imas/etc/modules/all
 ml Python
 ```
-Create and activate virtual environment. `Nakasvr` assumes the following default location and name of the server side virtual environment.
+Create and activate the server-side virtual environment. `Nakasvr` assumes the following default location and name of the server side virtual environment.
 ```sh
 python -m venv ~/.venv/nakasvr
 . ~/.venv/nakasvr/bin/activate
@@ -31,7 +31,11 @@ Install spyder kernel
 pip install .[server]
 ```
 ### Client install
-Client
+Create and activate the client-side virtual environment. This environment may take any name / location. We select the same name as used for the se
+```sh
+python -m venv ~/.venv/nakasvr
+. ~/.venv/nakasvr/bin/activate
+```
 ```sh
 pip install .[client]
 ```
@@ -60,6 +64,6 @@ poetry install
 pre-commit install
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTg3Mzk3MTIsLTE4MTQ3OTIxMjcsMT
-EzODQ3MjY4MSwxMTM3NzEwODEwLDY2ODk2MzgwOF19
+eyJoaXN0b3J5IjpbMTYzNTQ5NTUxMiwtMTgxNDc5MjEyNywxMT
+M4NDcyNjgxLDExMzc3MTA4MTAsNjY4OTYzODA4XX0=
 -->
