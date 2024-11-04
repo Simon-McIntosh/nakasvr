@@ -36,7 +36,7 @@ Create and activate the client-side virtual environment. This environment may ta
 python -m venv ~/.venv/nakasvr
 . ~/.venv/nakasvr/bin/activate
 ```
-Install the client environment. 
+Install the client environment. This install includes the Spyder IDE.
 ```sh
 pip install .[client]
 ```
@@ -67,7 +67,7 @@ poetry install
 pre-commit install
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4MTkyNDI2NiwxODM3MDc1NTcwLC0xOD
-E0NzkyMTI3LDExMzg0NzI2ODEsMTEzNzcxMDgxMCw2Njg5NjM4
-MDhdfQ==
+eyJoaXN0b3J5IjpbLTE0Mjk1MTE5NzYsMTQ4MTkyNDI2NiwxOD
+M3MDc1NTcwLC0xODE0NzkyMTI3LDExMzg0NzI2ODEsMTEzNzcx
+MDgxMCw2Njg5NjM4MDhdfQ==
 -->
