@@ -42,7 +42,7 @@ pip install .[client]
 ```
 
 ## Use
-Connection of a local Spyder IDE to a remote client requires the launch of a Spyder kernel on the server side. This is managed using the following script
+Connection of a local Spyder IDE to a remote client requires the launch of a Spyder kernel on the server side and the subsequent copy of the kernel connection file from the server to the client. This launch / copy step is only required following reboots of the `nakasvr23` anal
 
 ###
 ```sh
@@ -61,6 +61,6 @@ poetry install
 pre-commit install
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg2MDkxNTkwLC0xODE0NzkyMTI3LDExMz
+eyJoaXN0b3J5IjpbMjAwMDM5NTU4LC0xODE0NzkyMTI3LDExMz
 g0NzI2ODEsMTEzNzcxMDgxMCw2Njg5NjM4MDhdfQ==
 -->
