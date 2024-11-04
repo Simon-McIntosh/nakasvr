@@ -3737,4 +3737,4 @@ client = ["appdirs", "click", "fabric", "fsspec", "numpy", "spyder"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<4"
-content-hash = "574bcbac2430b7ab7e164f838c9a6dfa83e06f7682e7f7130d39141e7343e037"
+content-hash = "01da761b2e554756f0e28535cb654cf74ac2818aa0418aa2e51676b589fb01f5"
