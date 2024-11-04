@@ -15,7 +15,7 @@ Installation of dependencies using the `Nakasvr` module ensures that the
 compatible versions of the Spyder IDE and Spyder kernel are used.
 
 ### Server-side install
-Set up ssh key sharing between the client and the server.  Connect to theLoad Python module 
+Set up ssh key sharing between the client and the server.  Connect to `nakasvr23.naka.qst.go.jp` and the Load Python module 
 ```sh
 module use /home/d230021/public/imas/etc/modules/all
 ml Python
@@ -59,6 +59,6 @@ poetry install
 pre-commit install
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzY5NDIyMzcsLTE4MTQ3OTIxMjcsMT
-EzODQ3MjY4MSwxMTM3NzEwODEwLDY2ODk2MzgwOF19
+eyJoaXN0b3J5IjpbLTM3MzY1MjUzNCwtMTgxNDc5MjEyNywxMT
+M4NDcyNjgxLDExMzc3MTA4MTAsNjY4OTYzODA4XX0=
 -->
