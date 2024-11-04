@@ -21,8 +21,8 @@ repos:
     hooks:
       # - id: poetry-check  # TODO enable with release of poetry 2.0
       - id: poetry-lock
-#  - repo: https://github.com/python-poetry/poetry-plugin-export
-#    rev: ee112383b503288be4adc9137a53f2d8c738dabc
-#    hooks:
-#      - id: poetry-export
-#        args: ["--all-extras"]
+  - repo: https://github.com/python-poetry/poetry-plugin-export
+    rev: ee112383b503288be4adc9137a53f2d8c738dabc
+    hooks:
+      - id: poetry-export
+        args: ["--all-extras"]
