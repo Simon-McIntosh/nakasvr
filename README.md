@@ -15,15 +15,16 @@ Installation of dependencies using the `Nakasvr` module ensures that the
 compatible versions of the Spyder IDE and Spyder kernel are used.
 
 ### Client install
-If worki
-Create virtual environments for the client and server. Subsequent use of python commands assumes
+Load Python module 
+```sh
+module use /home/d230021/public/imas/etc/modules/all
+ml Python
+```
+Create virtual environment. The server side virtual environem for the client and server. Subsequent use of python commands assumes
 that the virtual environment is active.
 
 
-```sh
-module use /home/d230021/public/imas/etc/modules/all
-ml PythonNakasvr helps you install, lanuch, and connect remote python kernels to your local Spyder IDE
-```
+
 
 ```sh
 python -m venv ~/.venv/nakasvr
@@ -61,6 +62,6 @@ poetry install
 pre-commit install
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTkzMTI4NzYsLTE4MTQ3OTIxMjcsMTEzOD
-Q3MjY4MSwxMTM3NzEwODEwLDY2ODk2MzgwOF19
+eyJoaXN0b3J5IjpbLTI2MDA3OTM4NywtMTgxNDc5MjEyNywxMT
+M4NDcyNjgxLDExMzc3MTA4MTAsNjY4OTYzODA4XX0=
 -->
