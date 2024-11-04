@@ -10,8 +10,8 @@ your local Spyder IDE.
 ## Installation
 Installation is required on both the client (local) and server (remote). The use of
 virtual environments is encouraged when installing Nakasvr on both the client
-and the server. Installation of `Nakasvr` requires a recent Python>=3.10. Use of the 
-`Nakasvr` module ensures that the 
+and the server. Installation of `Nakasvr` requires a recent Python>=3.10. 
+Installation of dependencies using the `Nakasvr` module ensures that the 
 
 ### Client install
 Create virtual environments for the client and server. Subsequent use of python commands assumes
@@ -59,6 +59,6 @@ poetry install
 pre-commit install
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5MzQ5OTk0MSwxMTM4NDcyNjgxLDExMz
-c3MTA4MTAsNjY4OTYzODA4XX0=
+eyJoaXN0b3J5IjpbLTE4MTQ3OTIxMjcsMTEzODQ3MjY4MSwxMT
+M3NzEwODEwLDY2ODk2MzgwOF19
 -->
