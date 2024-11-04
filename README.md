@@ -8,12 +8,11 @@ Nakasvr helps you install, launch, and connect to remote python kernels from
 your local Spyder IDE.
 
 ## Installation
-Instalation is required on both the client (local) and server (remote). The use of
-virtual environments is encoraged when installing Nakasvr on both the client
+Installation is required on both the client (local) and server (remote). The use of
+virtual environments is encouraged when installing Nakasvr on both the client
 and the server.
 
 ### Client install
-
 Create virtual environments for the client and server. Subsequent use of python commands assumes
 that the virtual environment is active.
 
@@ -59,5 +58,6 @@ poetry install
 pre-commit install
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzNzcxMDgxMCw2Njg5NjM4MDhdfQ==
+eyJoaXN0b3J5IjpbMTEzODQ3MjY4MSwxMTM3NzEwODEwLDY2OD
+k2MzgwOF19
 -->
