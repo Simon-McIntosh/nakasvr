@@ -55,3 +55,6 @@ pipx inject poetry "poetry-dynamic-versioning[plugin]"
 poetry install
 pre-commit install
 ```
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEzNzg5NjI5NTVdfQ==
+-->
