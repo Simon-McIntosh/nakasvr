@@ -38,7 +38,7 @@ python -m venv ~/.venv/nakasvr
 ```
 Install the client environment. This install includes the Spyder IDE.
 ```sh
-pip install git+https://github.com/Simon-McIntosh/nakasvr.git@main[client]
+pip install "nakasvr[client] @ git+https://github.com/Simon-McIntosh/nakasvr.git@main"
 ```
 Connection of a local Spyder IDE to a remote client requires an instance of the Spyder kernel to be launched on server. The connection ID of this kernel must then be copied from the server to the client. Both of these steps are handled by the `Nakasvr` module using the `lanuch_kernel` and `copy_kernel` commands run from the client. 
 ```sh
@@ -68,7 +68,7 @@ poetry install
 pre-commit install
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4MDc0NDg1OCwxNDgxOTI0MjY2LDE4Mz
-cwNzU1NzAsLTE4MTQ3OTIxMjcsMTEzODQ3MjY4MSwxMTM3NzEw
-ODEwLDY2ODk2MzgwOF19
+eyJoaXN0b3J5IjpbMTAzOTc4MTAzOCwtNzgwNzQ0ODU4LDE0OD
+E5MjQyNjYsMTgzNzA3NTU3MCwtMTgxNDc5MjEyNywxMTM4NDcy
+NjgxLDExMzc3MTA4MTAsNjY4OTYzODA4XX0=
 -->
