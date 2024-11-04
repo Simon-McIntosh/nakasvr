@@ -12,11 +12,12 @@ Installation is required on both the client (local) and server (remote). The use
 virtual environments is encouraged when installing Nakasvr on both the client
 and the server. Installation of `Nakasvr` requires a recent Python>=3.10. 
 Installation of dependencies using the `Nakasvr` module ensures that the 
-compatible versions of the Spyder IDE and Spyder kernel are used.
+compatible versions of the Spyder IDE and Spyder kernel are used. SSH key sharing should be set up between the client and the server.
 
 ### Server-side install
-Set up ssh key sharing between the client and the server.  Connect to `nakasvr23.naka.qst.go.jp` and the Load Python module 
+Connect to `nakasvr23.naka.qst.go.jp` and the Load Python module 
 ```sh
+ssh <username>@nakasvr23.naka.qst.go.jp
 module use /home/d230021/public/imas/etc/modules/all
 ml Python
 ```
@@ -59,6 +60,6 @@ poetry install
 pre-commit install
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3MzY1MjUzNCwtMTgxNDc5MjEyNywxMT
-M4NDcyNjgxLDExMzc3MTA4MTAsNjY4OTYzODA4XX0=
+eyJoaXN0b3J5IjpbLTEyNTg3Mzk3MTIsLTE4MTQ3OTIxMjcsMT
+EzODQ3MjY4MSwxMTM3NzEwODEwLDY2ODk2MzgwOF19
 -->
