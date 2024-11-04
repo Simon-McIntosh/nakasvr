@@ -69,9 +69,8 @@ class SpyderKernel(Connect):
             assert self.filesystem.isdir(venv_dir)
         except AssertionError as error:
             raise AssertionError(
-                "SpyderKernel requires a venv on the "
-                "remote host with a compatatable version of "
-                "spyder-kernel installed."
+                "SpyderKernel requires the following venv to be present on the "
+                f"remote host {venv_dir}."
             ) from error
         return venv_dir
 
