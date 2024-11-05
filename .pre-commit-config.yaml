@@ -25,4 +25,4 @@ repos:
     rev: ee112383b503288be4adc9137a53f2d8c738dabc
     hooks:
       - id: poetry-export
-        args: ["--all-extras", "-f", "requirements.txt"]
+        args: ["--all-extras", "-f", "requirements.txt", "-o", "requirements.txt"]
