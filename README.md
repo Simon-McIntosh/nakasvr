@@ -11,7 +11,7 @@ your local Spyder IDE.
 Installation is required on both the client (local) and server (remote). The use of
 virtual environments is encouraged when installing Nakasvr on both the client
 and the server. Installation of `Nakasvr` requires a recent Python>=3.10. 
-Installation of dependencies using the `Nakasvr` module ensures that the 
+Installation of dependencies using the `Nakasvr` module ensures that
 compatible versions of the Spyder IDE and Spyder kernel are used. SSH key sharing should be set up between the client and the server.
 
 ### Server-side install
