@@ -28,7 +28,7 @@ python -m venv ~/.venv/nakasvr
 ```
 Install spyder kernel 
 ```sh
-pip install git+https://github.com/Simon-McIntosh/nakasvr.git@main
+pip install --user git+https://github.com/Simon-McIntosh/nakasvr.git@main
 ```
 ### Client-side install
 Create and activate the client-side virtual environment. This environment may take any name or location. Here, for simplicity, we select the same name and location of the virtual environment as the one used for the server side install.
@@ -68,7 +68,7 @@ poetry install
 pre-commit install
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzOTc4MTAzOCwtNzgwNzQ0ODU4LDE0OD
-E5MjQyNjYsMTgzNzA3NTU3MCwtMTgxNDc5MjEyNywxMTM4NDcy
-NjgxLDExMzc3MTA4MTAsNjY4OTYzODA4XX0=
+eyJoaXN0b3J5IjpbMjg5ODA5NTgzLDEwMzk3ODEwMzgsLTc4MD
+c0NDg1OCwxNDgxOTI0MjY2LDE4MzcwNzU1NzAsLTE4MTQ3OTIx
+MjcsMTEzODQ3MjY4MSwxMTM3NzEwODEwLDY2ODk2MzgwOF19
 -->
