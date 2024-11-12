@@ -40,6 +40,7 @@ authors = ["Simon McIntosh, <simon.mcintosh@iter.org>"]
 [project.scripts]
 launch_kernel = "nakasvr.kernel:launch_kernel"
 copy_kernel = "nakasvr.kernel:copy_kernel"
+kill_kernel = "nakasvr.kernel:kill_kernel"
 
 [tool.poetry-dynamic-versioning]
 enable = true
