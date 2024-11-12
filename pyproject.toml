@@ -9,7 +9,7 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.10,<4"
 dependencies = [
-  "spyder-kernels >= 3",
+  "spyder-kernels",
 ]
 
 [project.optional-dependencies]
