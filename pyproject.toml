@@ -19,7 +19,7 @@ client = [
   "fsspec",
   "numpy",
   "appdirs",
-  "spyder >= 6",
+  "spyder < 6",
 ]
 
 [tool.poetry.group.dev.dependencies]
