@@ -11,11 +11,11 @@ your local Spyder IDE.
 Installation is required on both the client (local) and server (remote). The use of
 virtual environments is encouraged when installing Nakasvr on both the client
 and the server. Installation of `Nakasvr` requires a recent Python>=3.10. 
-Installation of dependencies using the `Nakasvr` module ensures that the 
+Installation of dependencies using the `Nakasvr` module ensures that
 compatible versions of the Spyder IDE and Spyder kernel are used. SSH key sharing should be set up between the client and the server.
 
 ### Server-side install
-Connect to `nakasvr23.naka.qst.go.jp` and the Load Python module 
+Connect to `nakasvr23.naka.qst.go.jp` and load a recent Python (>=3.10) module.
 ```sh
 ssh <username>@nakasvr23.naka.qst.go.jp
 module use /home/d230021/public/imas/etc/modules/all
@@ -36,19 +36,19 @@ Create and activate the client-side virtual environment. This environment may ta
 python -m venv ~/.venv/nakasvr
 . ~/.venv/nakasvr/bin/activate
 ```
-Install the client environment. This install includes the Spyder IDE.
+Install the client environment. This install includes the Spyder IDE that is ensured to be compatable with the remote spyder-kernel.
 ```sh
 pip install "nakasvr[client] @ git+https://github.com/Simon-McIntosh/nakasvr.git@main"
 ```
 ## Use
 The following `lanuch_kernel`, `copy_kernel`, and `kill_kernel` commands are issued from the client-side.  These commands are used to manage the spyder kernel running on the Naka server. Commands are 'windowed' using `tmux`. This allows the remote spyder kernel to persist independent of the connection status of the user.
 
-Connection of a local Spyder IDE to a remote client requires an instance of the Spyder kernel to be launched on server. The connection ID of this kernel must then be copied from the server to the client. Both of these steps are handled by the `Nakasvr` module using the `lanuch_kernel` and `copy_kernel` commands run from the client. 
+Connection of a local Spyder IDE to a remote client requires an instance of the Spyder kernel to be launched on server. The connection file for this kernel must then be copied from the server to the client. Both of these steps are handled by the `Nakasvr` module using the `lanuch_kernel` and `copy_kernel` commands run from the client. 
 ```sh
 launch_kernel <username>
 copy_kernel <username>
 ```
-The kernel running on the Naka server may be terminated with the following command.
+The kernel running on the Naka server may be terminated at any time with the following command.
 ```sh
 kill_kernel <username>
 ```
@@ -57,8 +57,8 @@ The launch / copy step described below is only required following reboots of the
 Once the remote spyder kernel has been lanuched and the ID has been copied back to the client a local Spyder (>=6.0.0) IDE may now be connected to the remote kernel. This IDE does not need to be run in an OS of choice (Windows, Linux, Mac). 
 Select `consoles/connect to an existing kernel` from within the Spyder IDE and fill in the required details, including the path to the `kernel.json` connection file downloaded by the `copy_kernel` command.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2MDI2Njc5MywxMDM5NzgxMDM4LC03OD
-A3NDQ4NTgsMTQ4MTkyNDI2NiwxODM3MDc1NTcwLC0xODE0Nzky
-MTI3LDExMzg0NzI2ODEsMTEzNzcxMDgxMCw2Njg5NjM4MDhdfQ
-==
+eyJoaXN0b3J5IjpbMTMyODkzNTg2NywxODYwMjY2NzkzLDEwMz
+k3ODEwMzgsLTc4MDc0NDg1OCwxNDgxOTI0MjY2LDE4MzcwNzU1
+NzAsLTE4MTQ3OTIxMjcsMTEzODQ3MjY4MSwxMTM3NzEwODEwLD
+Y2ODk2MzgwOF19
 -->
