@@ -57,8 +57,8 @@ The launch / copy step described below is only required following reboots of the
 Once the remote spyder kernel has been lanuched and the ID has been copied back to the client a local Spyder (>=6.0.0) IDE may now be connected to the remote kernel. This IDE does not need to be run in an OS of choice (Windows, Linux, Mac). 
 Select `consoles/connect to an existing kernel` from within the Spyder IDE and fill in the required details, including the path to the `kernel.json` connection file downloaded by the `copy_kernel` command.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2MDI2Njc5MywxMDM5NzgxMDM4LC03OD
-A3NDQ4NTgsMTQ4MTkyNDI2NiwxODM3MDc1NTcwLC0xODE0Nzky
-MTI3LDExMzg0NzI2ODEsMTEzNzcxMDgxMCw2Njg5NjM4MDhdfQ
-==
+eyJoaXN0b3J5IjpbMTMyODkzNTg2NywxODYwMjY2NzkzLDEwMz
+k3ODEwMzgsLTc4MDc0NDg1OCwxNDgxOTI0MjY2LDE4MzcwNzU1
+NzAsLTE4MTQ3OTIxMjcsMTEzODQ3MjY4MSwxMTM3NzEwODEwLD
+Y2ODk2MzgwOF19
 -->
