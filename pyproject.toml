@@ -9,7 +9,7 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.10,<4"
 dependencies = [
-  "spyder-kernels",
+  "spyder-kernels >= 3.0.0",
 ]
 
 [project.optional-dependencies]
@@ -19,7 +19,6 @@ client = [
   "fsspec",
   "numpy",
   "appdirs",
-  "spyder < 6",
 ]
 
 [tool.poetry.group.dev.dependencies]
