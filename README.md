@@ -28,7 +28,7 @@ python -m venv ~/.venv/nakasvr
 ```
 Install the spyder kernel into the `nakasvr` venv.
 ```sh
-pip install --user git+https://github.com/Simon-McIntosh/nakasvr.git@main
+pip install git+https://github.com/Simon-McIntosh/nakasvr.git@main
 ```
 ### Client-side install
 Create and activate the client-side virtual environment. This environment may take any name or location. Here, for simplicity, we select the same name and location of the virtual environment as the one used for the server side install.
